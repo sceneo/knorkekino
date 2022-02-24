@@ -6,6 +6,7 @@ import com.tngtech.archunit.core.domain.JavaClasses;
 import com.tngtech.archunit.core.importer.ClassFileImporter;
 import com.tngtech.archunit.lang.ArchRule;
 import org.junit.jupiter.api.Test;
+import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,7 +28,7 @@ public class NamingArchitectureTest {
 
     @Test
     public void restControllerNamesShouldEndOnController() {
-        // TODO 1: Check that all existing rest controller (api endpoints) have a name ending with "Controller"
-        // TODO 2: Fix the non-correct (there are 3) classes
+        // TODO 2: Check that all existing rest controller (api endpoints) have a name ending with "Controller"
+        // TODO 3: Fix the non-correct (there are 3) classes and rerun the test again
     }
 }

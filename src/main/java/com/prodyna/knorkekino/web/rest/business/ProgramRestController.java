@@ -16,7 +16,7 @@ public class ProgramRestController {
     ProgramService programService;
 
     @GetMapping(path = "/{id}")
-    public ProgramDto getProgram(@RequestParam int programId) {
-        return ProgramDto.from(programService.getProgramById(programId));
+    public ProgramDto getProgram(@RequestParam String movieName) {
+        return new ProgramDto();
     }
 }

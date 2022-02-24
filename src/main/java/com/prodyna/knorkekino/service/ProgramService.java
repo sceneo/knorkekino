@@ -1,36 +1,41 @@
 package com.prodyna.knorkekino.service;
 
-import com.prodyna.knorkekino.business.program.Program;
-import java.util.Collections;
-import java.util.List;
+import static com.prodyna.knorkekino.persistance.ProgramDao.loadProgram;
+
+import com.prodyna.knorkekino.service.business.Movie;
+import com.prodyna.knorkekino.service.business.Program;
+import com.prodyna.knorkekino.service.monitoring.Monitored;
 import org.springframework.stereotype.Service;
 
 @Service
+@Monitored
 public class ProgramService {
 
-    List<Program> movies = Collections.emptyList();
+    private static final int businessId = 618;
+    private Program program;
 
-    public Program getProgramById(int programId) {
-        return movies.stream().filter(m -> m.getProgramId() == programId).findFirst().get();
+    public Movie getMovieByName(String name) {
+        return program.getMovies().stream().filter(m -> m.getName().equals(name)).findFirst().get();
     }
-    // TODO: your new colleague has added some unfinished work. Please comment-in his
-    // "precious" code and find out if it allignes with our architeture guidelines
 
-    /*
-    public void loadProgram() {
-     // I couldn't implement that so far
-         movies.addAll(List.of("Die Hard", "Die Hard 2", "Die Hard with a vengeance"));
+    // your new colleague has added this code without speaking to anyone else in the department before.
+    // this might look a bit messy, but it loads the program and prints the output to the console
+    public void loadAndPrintProgram() {
+        program = loadProgram();
         printMovies();
     }
 
-    private void printMovies(){
-        if(movies.isEmpty()){
-            throw new RuntimeException("Did not find movies");
-        }
-        else {
-            System.out.println("Found: " + movies.toString());
+    private void printMovies() {
+        if (program == null) {
+            throw new RuntimeException("Program could not be loaded");
+        } else if (program.getMovies().isEmpty()) {
+            throw new RuntimeException("No movie available");
+        } else {
+            program
+                .getMovies()
+                .forEach(m -> {
+                    System.out.println("Found: " + m.toString());
+                });
         }
     }
-*/
-
 }
