@@ -2,9 +2,10 @@ package com.prodyna.knorkekino.service.mapper;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.prodyna.knorkekino.domain.User;
-import com.prodyna.knorkekino.service.dto.AdminUserDTO;
-import com.prodyna.knorkekino.service.dto.UserDTO;
+import com.prodyna.knorkekino.user.domain.User;
+import com.prodyna.knorkekino.user.service.dto.AdminUserDTO;
+import com.prodyna.knorkekino.user.service.dto.UserDTO;
+import com.prodyna.knorkekino.user.service.mapper.UserMappingService;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;

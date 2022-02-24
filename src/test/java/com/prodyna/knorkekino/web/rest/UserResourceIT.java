@@ -7,13 +7,14 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import com.prodyna.knorkekino.IntegrationTest;
-import com.prodyna.knorkekino.domain.Authority;
-import com.prodyna.knorkekino.domain.User;
-import com.prodyna.knorkekino.repository.UserRepository;
-import com.prodyna.knorkekino.security.AuthoritiesConstants;
-import com.prodyna.knorkekino.service.dto.AdminUserDTO;
-import com.prodyna.knorkekino.service.mapper.UserMappingService;
-import com.prodyna.knorkekino.web.rest.vm.ManagedUserVM;
+import com.prodyna.knorkekino.user.domain.Authority;
+import com.prodyna.knorkekino.user.domain.User;
+import com.prodyna.knorkekino.user.repository.UserRepository;
+import com.prodyna.knorkekino.user.rest.UserResource;
+import com.prodyna.knorkekino.user.rest.vm.ManagedUserVM;
+import com.prodyna.knorkekino.user.security.AuthoritiesConstants;
+import com.prodyna.knorkekino.user.service.dto.AdminUserDTO;
+import com.prodyna.knorkekino.user.service.mapper.UserMappingService;
 import java.time.Instant;
 import java.util.*;
 import java.util.function.Consumer;

@@ -6,26 +6,17 @@ skinparam component {
   BackgroundColor #white
 }
 
-[Address] <<..address..>>
-[Customer] <<..customer..>>
-[Order] <<..order..>> #white/PowderBlue
-[Tickets] <<..ticket..>> #white/PowderBlue
-[Hall] <<..hall..>> as hall
-[Seat] <<..seat..>> as seat
-[Movie] <<..movie..>> as movie
-[Program] <<..program..>> as program #PowderBlue
+[Controller] <<..controller..>> as controller #PowderBlue
+[Facade] <<..facade..>> as facade #PowderBlue
+[Service] <<..service..>> as service #PowderBlue
+[Persistence] <<..persistence..>> as persistence #white/PowderBlue
+
+controller ---> service
+controller --> facade
+facade --> service
+service --> persistence
 
 
 
-[Order] ---> [Customer] : is placed by
-[Order] --> [Tickets]
-[Tickets] --> hall
-[Tickets] --> movie
-hall -> seat
-
-[Customer] --> [Address]
-
-[Tickets] <--[#green]- program
-note top on link #lightgreen: provides test
 
 @enduml

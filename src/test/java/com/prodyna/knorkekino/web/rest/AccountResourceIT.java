@@ -6,17 +6,17 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import com.prodyna.knorkekino.IntegrationTest;
-import com.prodyna.knorkekino.config.Constants;
-import com.prodyna.knorkekino.domain.User;
-import com.prodyna.knorkekino.repository.AuthorityRepository;
-import com.prodyna.knorkekino.repository.UserRepository;
-import com.prodyna.knorkekino.security.AuthoritiesConstants;
-import com.prodyna.knorkekino.service.UserService;
-import com.prodyna.knorkekino.service.dto.AdminUserDTO;
-import com.prodyna.knorkekino.service.dto.PasswordChangeDTO;
-import com.prodyna.knorkekino.service.dto.UserDTO;
-import com.prodyna.knorkekino.web.rest.vm.KeyAndPasswordVM;
-import com.prodyna.knorkekino.web.rest.vm.ManagedUserVM;
+import com.prodyna.knorkekino.user.config.Constants;
+import com.prodyna.knorkekino.user.domain.User;
+import com.prodyna.knorkekino.user.repository.AuthorityRepository;
+import com.prodyna.knorkekino.user.repository.UserRepository;
+import com.prodyna.knorkekino.user.rest.AccountResource;
+import com.prodyna.knorkekino.user.rest.vm.KeyAndPasswordVM;
+import com.prodyna.knorkekino.user.rest.vm.ManagedUserVM;
+import com.prodyna.knorkekino.user.security.AuthoritiesConstants;
+import com.prodyna.knorkekino.user.service.UserService;
+import com.prodyna.knorkekino.user.service.dto.AdminUserDTO;
+import com.prodyna.knorkekino.user.service.dto.PasswordChangeDTO;
 import java.time.Instant;
 import java.util.*;
 import org.apache.commons.lang3.RandomStringUtils;

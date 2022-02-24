@@ -1,6 +1,6 @@
 package com.prodyna.knorkekino;
 
-import com.prodyna.knorkekino.config.ApplicationProperties;
+import com.prodyna.knorkekino.user.config.ApplicationProperties;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Arrays;

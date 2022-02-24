@@ -2,8 +2,10 @@ package com.prodyna.knorkekino.security.jwt;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.prodyna.knorkekino.management.SecurityMetersService;
-import com.prodyna.knorkekino.security.AuthoritiesConstants;
+import com.prodyna.knorkekino.user.management.SecurityMetersService;
+import com.prodyna.knorkekino.user.security.AuthoritiesConstants;
+import com.prodyna.knorkekino.user.security.jwt.JWTFilter;
+import com.prodyna.knorkekino.user.security.jwt.TokenProvider;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 import io.micrometer.core.instrument.simple.SimpleMeterRegistry;

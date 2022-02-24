@@ -1,9 +1,10 @@
 package com.prodyna.knorkekino.config;
 
-import static com.prodyna.knorkekino.config.StaticResourcesWebConfiguration.*;
+import static com.prodyna.knorkekino.user.config.StaticResourcesWebConfiguration.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 
+import com.prodyna.knorkekino.user.config.StaticResourcesWebConfiguration;
 import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

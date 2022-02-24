@@ -1,10 +1,12 @@
 package com.prodyna.knorkekino.service;
 
-import static com.prodyna.knorkekino.persistance.ProgramDao.loadProgram;
+import static com.prodyna.knorkekino.persistence.ProgramDao.loadProgram;
 
-import com.prodyna.knorkekino.service.business.Movie;
-import com.prodyna.knorkekino.service.business.Program;
+import com.prodyna.knorkekino.persistence.entity.Movie;
+import com.prodyna.knorkekino.persistence.entity.Program;
 import com.prodyna.knorkekino.service.monitoring.Monitored;
+import java.util.List;
+import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -23,6 +25,10 @@ public class ProgramService {
     public void loadAndPrintProgram() {
         program = loadProgram();
         printMovies();
+    }
+
+    public static List<Movie> filterMovieListByDieHardMovies(Program program) {
+        return program.getMovies().stream().filter(m -> m.getName().contains("Die Hard")).collect(Collectors.toList());
     }
 
     private void printMovies() {

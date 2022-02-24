@@ -1,8 +1,7 @@
 package com.prodyna.knorkekino.service.dto;
 
-import com.prodyna.knorkekino.service.business.Program;
+import com.prodyna.knorkekino.persistence.entity.Program;
 
-@Dto
 public class ProgramDto {
 
     public ProgramDto() {}

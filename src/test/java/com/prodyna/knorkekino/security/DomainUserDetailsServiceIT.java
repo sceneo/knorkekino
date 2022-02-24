@@ -4,8 +4,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 import com.prodyna.knorkekino.IntegrationTest;
-import com.prodyna.knorkekino.domain.User;
-import com.prodyna.knorkekino.repository.UserRepository;
+import com.prodyna.knorkekino.user.domain.User;
+import com.prodyna.knorkekino.user.repository.UserRepository;
+import com.prodyna.knorkekino.user.security.DomainUserDetailsService;
+import com.prodyna.knorkekino.user.security.UserNotActivatedException;
 import java.util.Locale;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.BeforeEach;

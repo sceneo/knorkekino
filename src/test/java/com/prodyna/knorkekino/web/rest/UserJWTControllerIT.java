@@ -10,9 +10,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import com.prodyna.knorkekino.IntegrationTest;
-import com.prodyna.knorkekino.domain.User;
-import com.prodyna.knorkekino.repository.UserRepository;
-import com.prodyna.knorkekino.web.rest.vm.LoginVM;
+import com.prodyna.knorkekino.user.domain.User;
+import com.prodyna.knorkekino.user.repository.UserRepository;
+import com.prodyna.knorkekino.user.rest.UserJWTController;
+import com.prodyna.knorkekino.user.rest.vm.LoginVM;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;

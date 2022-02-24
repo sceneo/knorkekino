@@ -5,8 +5,9 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
 import com.prodyna.knorkekino.IntegrationTest;
-import com.prodyna.knorkekino.config.Constants;
-import com.prodyna.knorkekino.domain.User;
+import com.prodyna.knorkekino.user.config.Constants;
+import com.prodyna.knorkekino.user.domain.User;
+import com.prodyna.knorkekino.user.service.MailService;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;

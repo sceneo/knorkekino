@@ -6,9 +6,10 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import com.prodyna.knorkekino.IntegrationTest;
-import com.prodyna.knorkekino.domain.User;
-import com.prodyna.knorkekino.repository.UserRepository;
-import com.prodyna.knorkekino.security.AuthoritiesConstants;
+import com.prodyna.knorkekino.user.domain.User;
+import com.prodyna.knorkekino.user.repository.UserRepository;
+import com.prodyna.knorkekino.user.rest.UserResource;
+import com.prodyna.knorkekino.user.security.AuthoritiesConstants;
 import javax.persistence.EntityManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

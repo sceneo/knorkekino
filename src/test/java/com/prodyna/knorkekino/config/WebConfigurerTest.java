@@ -10,6 +10,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import com.prodyna.knorkekino.user.config.WebConfigurer;
 import java.io.File;
 import java.util.*;
 import javax.servlet.*;

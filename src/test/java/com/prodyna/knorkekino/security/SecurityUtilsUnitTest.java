@@ -2,6 +2,8 @@ package com.prodyna.knorkekino.security;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.prodyna.knorkekino.user.security.AuthoritiesConstants;
+import com.prodyna.knorkekino.user.security.SecurityUtils;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Optional;
