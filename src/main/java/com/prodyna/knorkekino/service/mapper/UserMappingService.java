@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
  * support is still in beta, and requires a manual step with an IDE.
  */
 @Service
-public class UserMapper {
+public class UserMappingService {
 
     public List<UserDTO> usersToUserDTOs(List<User> users) {
         return users.stream().filter(Objects::nonNull).map(this::userToUserDTO).collect(Collectors.toList());

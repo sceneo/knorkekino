@@ -11,6 +11,7 @@ import javax.validation.constraints.*;
 /**
  * A DTO representing a user, with his authorities.
  */
+@Dto
 public class AdminUserDTO {
 
     private Long id;

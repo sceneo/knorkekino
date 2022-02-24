@@ -12,8 +12,7 @@ import com.prodyna.knorkekino.domain.User;
 import com.prodyna.knorkekino.repository.UserRepository;
 import com.prodyna.knorkekino.security.AuthoritiesConstants;
 import com.prodyna.knorkekino.service.dto.AdminUserDTO;
-import com.prodyna.knorkekino.service.dto.UserDTO;
-import com.prodyna.knorkekino.service.mapper.UserMapper;
+import com.prodyna.knorkekino.service.mapper.UserMappingService;
 import com.prodyna.knorkekino.web.rest.vm.ManagedUserVM;
 import java.time.Instant;
 import java.util.*;
@@ -65,7 +64,7 @@ class UserResourceIT {
     private UserRepository userRepository;
 
     @Autowired
-    private UserMapper userMapper;
+    private UserMappingService userMapper;
 
     @Autowired
     private EntityManager em;

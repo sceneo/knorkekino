@@ -3,6 +3,7 @@ package com.prodyna.knorkekino.service.dto;
 /**
  * A DTO representing a password change required data - current and new password.
  */
+@Dto
 public class PasswordChangeDTO {
 
     private String currentPassword;

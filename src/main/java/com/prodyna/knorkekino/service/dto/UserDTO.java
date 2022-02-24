@@ -5,6 +5,7 @@ import com.prodyna.knorkekino.domain.User;
 /**
  * A DTO representing a user, with only the public attributes.
  */
+@Dto
 public class UserDTO {
 
     private Long id;
